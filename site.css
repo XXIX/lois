@@ -1,0 +1,56 @@
+body {
+	background-color: #281c47;
+	color: white;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.logo-container {
+	position: absolute;
+	top: 30%;
+	left: 0;
+	background: transparent url('img/logo-filled-bronze.png') no-repeat center center;
+	background-size: contain;
+	height: 30%;
+	width:100%;
+}
+
+h1 {
+	text-align: center;
+	text-indent: -99999999px;
+	height: auto;
+	width: 50%;
+}
+
+footer {
+	text-align: center;
+	position: fixed;
+	bottom: 20px;
+	width: 100%;
+	z-index: 999999;
+}
+
+footer h2, footer a {
+	font-size: 11px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: white;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+footer a:hover {
+	opacity: .8;
+}
+
+a:visited {
+	color: inherit;
+	text-decoration: none;
+}
