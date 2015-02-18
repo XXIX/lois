@@ -1,0 +1,95 @@
+@mixin box-sizing($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+@mixin border-box() {
+  @include box-sizing(border-box);
+}
+
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+@mixin overflow-scroll() {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin mask($image) {
+  -webkit-mask-image: url($image);
+  -o-mask-image: url($image);
+  -moz-mask-image: url($image);
+  mask-image: url($image);
+}
+
+@mixin mask-size($size) {
+  -webkit-mask-size: $size;
+  -o-mask-size: $size;
+  -moz-mask-size: $size;
+  mask-size: $size;
+}
+
+@mixin mask-repeat($repeat) {
+  -webkit-mask-repeat: $repeat;
+  -o-mask-repeat: $repeat;
+  -moz-mask-repeat: $repeat;
+  mask-repeat: $repeat;
+}
+
+@mixin mask-position($position) {
+  -webkit-mask-position: $position;
+  -o-mask-position: $position;
+  -moz-mask-position: $position;
+  mask-position: $position;
+}
+
+@mixin appearance($appearance) {
+  -webkit-appearance:     $appearance;
+  -moz-appearance:        $appearance;
+  -ms-appearance:         $appearance;
+  -o-appearance:          $appearance;
+  appearance:             $appearance;
+}
+
+@mixin hyphenate() {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}

@@ -1,0 +1,123 @@
+/**
+ * Stencil Default Settings
+ */
+
+$color-brand:                            #19a9c4 !default;
+
+/* Device sizes */
+$device-xxs:                             480px !default;
+$device-xs:                              567px !default;
+$device-s:                               640px !default;
+$device-m:                               768px !default;
+$device-l:                               1024px !default;
+$device-xl:                              1224px !default;
+$device-xxl:                             1824px !default;
+
+/* Screen size shortcuts */
+$tab:                                    $device-m !default;
+$lap:                                    $device-l !default;
+$desk:                                   $device-xl !default;
+$cinema:                                 $device-xxl !default;
+
+/* Spacing */
+$space-xxs:                              2px !default;
+$space-xs:                               5px !default;
+$space-s:                                10px !default;
+$space-m:                                15px !default;
+$space-l:                                20px !default;
+$space-xl:                               30px !default;
+$space-xxl:                              40px !default;
+
+$grid-columns:                           12 !default;
+$grid-gutter-width:                      30px !default;
+$container-tab:                          $tab + $grid-gutter-width !default;
+$container-lap:                          $lap + $grid-gutter-width !default;
+$container-desk:                         $desk + $grid-gutter-width !default;
+$container-cinema:                       $cinema + $grid-gutter-width !default;
+
+$nav-logo-width:                         120px;
+$nav-height:                             50px !default;
+$footer-height:                          40px !default;
+
+/* Border Size */
+$border-xxs:                             1px !default;
+$border-xs:                              2px !default;
+$border-s:                               3px !default;
+$border-m:                               4px !default;
+$border-l:                               5px !default;
+$border-xl:                              10px !default;
+$border-xxl:                             15px !default;
+
+/* Font Sizes */
+$text-xxs:                               12px !default;
+$text-xs:                                14px !default;
+$text-s:                                 18px !default;
+$text-m:                                 24px !default;
+$text-l:                                 30px !default;
+$text-xl:                                42px !default;
+$text-xxl:                               60px !default;
+
+$letter-xxs:                             0.05em !default;
+$letter-xs:                              0.1em !default;
+$letter-s:                               1px !default;
+$letter-m:                               2px !default;
+$letter-l:                               3px !default;
+$letter-xl:                              4px !default;
+$letter-xxl:                             5px !default;
+
+$line-xxs:                               0.8 !default;
+$line-xs:                                1.0 !default;
+$line-s:                                 1.2 !default;
+$line-m:                                 1.4 !default;
+$line-l:                                 1.6 !default;
+$line-xl:                                1.8 !default;
+$line-xxl:                               2.0 !default;
+
+$text-light-family:                      'Helvetica Neue', Helvetica !default;
+$text-light-weight:                      100 !default;
+$text-light-style:                       normal !default;
+
+$text-regular-family:                    'Helvetica Neue', Helvetica !default;
+$text-regular-weight:                    400 !default;
+$text-regular-style:                     normal !default;
+
+$text-bold-family:                       'Helvetica Neue', Helvetica !default;
+$text-bold-weight:                       700 !default;
+$text-bold-style:                        normal !default;
+
+/* Colors */
+$color-base:                             #333 !default;
+$color-link:                             #4183c4 !default;
+$color-link-hover:                       #4183c4 !default;
+$color-line:                             #ccc !default;
+$color-warning:                          #e27260 !default;
+
+/* Forms */
+$form-element-height:                    42px !default;
+$form-font-size:                         14px !default;
+$form-color:                             $color-base !default;
+$form-background:                        #fff !default;
+$form-border-color:                      #ccc !default;
+$form-border-size:                       1px !default;
+$form-border-radius:                     2px !default;
+
+$form-focus-color:                       $form-color !default;
+$form-focus-background:                  $form-background !default;
+$form-focus-border-color:                #4183c4 !default;
+
+$form-action-border-size:                $border-xxs !default;
+$form-action-border-radius:              $border-xs !default;
+
+$form-action-default-color:              #fff !default;
+$form-action-default-background:         #3498db !default;
+$form-action-default-border-color:       $form-action-default-background !default;
+$form-action-default-hover-color:        $form-action-default-color !default;
+$form-action-default-hover-background:   darken($form-action-default-background, 10%) !default;
+$form-action-default-hover-border-color: $form-action-default-border-color !default;
+
+$form-action-cancel-color:              #fff !default;
+$form-action-cancel-background:         #e27260 !default;
+$form-action-cancel-border-color:       $form-action-cancel-background !default;
+$form-action-cancel-hover-color:        $form-action-cancel-color !default;
+$form-action-cancel-hover-background:   darken($form-action-cancel-background, 10%) !default;
+$form-action-cancel-hover-border-color: $form-action-cancel-border-color !default;

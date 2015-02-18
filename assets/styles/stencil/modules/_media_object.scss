@@ -1,0 +1,54 @@
+/**
+    _____ _                  _ _
+  / ____| |                (_) |
+  | (___ | |_ ___ _ __   ___ _| |
+  \___ \| __/ _ \ '_ \ / __| | |
+  ____) | ||  __/ | | | (__| | |
+  |_____/ \__\___|_| |_|\___|_|_|
+
+  - - - - - - - - - - - - - - - -
+
+  Module: Media Object
+
+  - - - - - - - - - - - - - - - -
+**/
+
+.mod-media {
+  @extend %module;
+}
+
+.mod-media-body {
+  @extend %media-body;
+}
+
+.mod-media-img {
+  @extend %media-img;
+}
+
+.mod-media-img-ext {
+  @extend %media-img-ext;
+}
+
+.mod-flag {
+  display: table;
+  width: 100%;
+}
+
+.mod-flag-img,
+.mod-flag-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mod-flag-img {
+  padding-right: 10px;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+}
+
+.mod-flag-body {
+  width: 100%;
+}

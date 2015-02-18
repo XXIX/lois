@@ -1,0 +1,36 @@
+/**
+    _____ _                  _ _
+  / ____| |                (_) |
+  | (___ | |_ ___ _ __   ___ _| |
+  \___ \| __/ _ \ '_ \ / __| | |
+  ____) | ||  __/ | | | (__| | |
+  |_____/ \__\___|_| |_|\___|_|_|
+
+  - - - - - - - - - - - - - - - -
+
+  Module: Sticky Footer
+
+  - - - - - - - - - - - - - - - -
+**/
+
+$footer-height: 40px !default;
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+}
+
+.wrapper:after {
+  content: "";
+  display: block;
+}
+
+footer, .wrapper:after {
+  height: $footer-height;
+  width: 100%;
+}
+
