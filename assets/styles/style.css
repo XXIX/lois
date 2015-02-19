@@ -3775,6 +3775,10 @@ footer.active .mod-footer-toggle {
 .mod-index-module-title {
   word-spacing: 99999px; }
 
+html,
+body {
+  height: 100%; }
+
 nav {
   height: 58px;
   width: 100%;
@@ -3792,8 +3796,20 @@ section {
   section .section-inner {
     width: 50%;
     min-height: 100%;
+    display: block;
     float: left; }
   section .section-left {
     background-color: #281c47; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=style.css.map */
