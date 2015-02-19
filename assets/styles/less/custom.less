@@ -1,0 +1,37 @@
+@brand-blue: black;
+@brand-bronze: red;
+
+nav {
+	height: @nav-height;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: @brand-bronze;
+}
+
+section {
+	min-height: 100%;
+	width: 100%;
+	display: block;
+	position: absolute;
+
+	.column {
+		width: 50%;
+		min-height: 100%;
+		display: block;
+		float: left;
+
+	}
+
+	.section-left {
+		background-color: @brand-blue;
+	}
+
+	.section-right {
+
+	}
+}
+
+

@@ -1,1 +1,0 @@
-$('.js-hyphenate').hyphenate('en-us');
