@@ -923,7 +923,7 @@ legend {
  */
 input, label, select, .mod-btn, .mod-btn-cancel, button, input[type=submit], textarea {
   display: inline-block;
-  font-family: "Relative-Book";
+  font-family: "Visuelt-Book";
   font-weight: normal;
   font-style: normal;
   margin: 0;
@@ -1240,13 +1240,13 @@ label.radio:before {
   font-size: 20px; }
 
 .mod-footer-header, .mod-product-filter-menu-toggle-control, .mod-product-info-title, .mod-newsletter-title, .mod-artists-title, .mod-artist-info-bio-title, .mod-artist-collection-cta, .mod-index-module-title {
-  font-size: 30px; }
+  font-size: 25px; }
 
 .mod-product-filter-menu-item a, .mod-page-title, .mod-artists-product-title, .mod-feature-products-title, .mod-feature-artist-title, .mod-index-cta-title {
-  font-size: 40px; }
+  font-size: 28px; }
 
 .mod-collections-collection-title, .mod-promo-title, .mod-press-article-title, .mod-feature-product-grid-title, .mod-feature-product-filter-item span.active {
-  font-size: 75px; }
+  font-size: 70px; }
 
 .mod-press-article-title {
   letter-spacing: 0.05em; }
@@ -1267,12 +1267,12 @@ label.radio:before {
   letter-spacing: 10px; }
 
 .mod-nav a, .mod-add-to-cart-submit button, .mod-products-product-price, .mod-artists-title, .mod-artist-collection-title, .mod-press-article-title, .mod-feature-artist-label {
-  font-family: "Relative-Book";
+  font-family: "Visuelt-Book";
   font-weight: normal;
   font-style: normal; }
 
 .mod-footer-header, .mod-footer-links .mod-footer-link a, .mod-footer-newsletter label, .mod-footer-newsletter input, .mod-footer-newsletter button, .mod-add-to-cart-swatch-inner, .mod-product-filter-menu-toggle-control, .mod-product-filter-menu-item a, .mod-artists-product-title, .mod-nav-artists-collection, .mod-artist-collection-cta, .mod-feature-product-grid-title, .mod-feature-products-title, .mod-feature-product-filter-item span, .mod-feature-artist-title {
-  font-family: "Relative-Bold";
+  font-family: "Visuelt-Bold";
   font-weight: normal;
   font-style: normal; }
 
@@ -1371,19 +1371,19 @@ label.radio:before {
     font-size: 20px; }
 
   .mod-footer-newsletter label, .mod-footer-newsletter input, .mod-product-title, .mod-product-price {
-    font-size: 30px; }
+    font-size: 25px; }
 
   .mod-newsletter-title, .mod-index-module-title {
-    font-size: 40px; }
+    font-size: 28px; }
 
   .mod-product-filter-menu-item a, .mod-artists-product-title, .mod-feature-products-title, .mod-feature-product-filter-item span.active, .mod-feature-artist-title, .mod-index-cta-title {
-    font-size: 75px; }
+    font-size: 70px; }
 
   .mod-collections-collection-title, .mod-promo-title, .mod-page-title, .mod-press-article-title, .mod-feature-product-grid-title {
-    font-size: 150px; }
+    font-size: 100px; }
 
   .mod-feature-products-title {
-    font-family: "Relative-Bold";
+    font-family: "Visuelt-Bold";
     font-weight: normal;
     font-style: normal; }
 
@@ -1512,7 +1512,7 @@ label.radio:before {
 .mod-nav {
   margin-left: -15px;
   margin-right: -15px;
-  height: 86px;
+  height: 58px;
   z-index: 30;
   position: relative; }
   .mod-nav:before, .mod-nav:after {
@@ -1527,15 +1527,15 @@ label.radio:before {
     -o-transition: 0.3s all;
     transition: 0.3s all;
     color: black;
-    height: 86px;
-    line-height: 86px;
+    height: 58px;
+    line-height: 58px;
     margin: 0;
     padding: 10px 15px; }
     .mod-nav a:hover {
       color: black; }
 
 .mod-nav-brand {
-  line-height: 86px;
+  line-height: 58px;
   z-index: 32; }
 
 .mod-nav-logo, .mod-product-nav-back {
@@ -1555,8 +1555,8 @@ label.radio:before {
 
 .mod-nav-menu-toggle-control {
   float: right;
-  height: 86px !important;
-  line-height: 86px !important;
+  height: 58px !important;
+  line-height: 58px !important;
   position: relative;
   padding: 0 !important;
   z-index: 32; }
@@ -1568,7 +1568,7 @@ label.radio:before {
       background: white;
       left: 0;
       top: 0;
-      padding-top: 86px;
+      padding-top: 58px;
       position: absolute;
       width: 100%;
       z-index: 31; } }
@@ -1667,7 +1667,7 @@ footer, .wrapper:after {
   Nav
 ******************************************************************/
 .mod-nav {
-  height: 86px;
+  height: 58px;
   z-index: 30;
   pointer-events: none;
   position: fixed;
@@ -1679,8 +1679,8 @@ footer, .wrapper:after {
     -o-transition: 0.3s all;
     transition: 0.3s all;
     color: black;
-    height: 86px;
-    line-height: 86px;
+    height: 58px;
+    line-height: 58px;
     margin: 0;
     padding: 10px 15px; }
     .mod-nav a:hover {
@@ -2974,7 +2974,7 @@ footer.active .mod-footer-toggle {
 .mod-promo {
   background: black;
   display: block;
-  margin-top: -86px;
+  margin-top: -58px;
   position: absolute;
   top: 0;
   width: 100%; }
@@ -3208,9 +3208,9 @@ footer.active .mod-footer-toggle {
   .mod-artist-info-bio {
     margin-top: 0 !important; } }
 .mod-artist-info-bio a {
-  color: #3056FA; }
+  color: #281c47; }
   .mod-artist-info-bio a:hover {
-    color: #0632f1; }
+    color: #130e22; }
 
 .mod-artist-images {
   height: 100%; }
@@ -3251,7 +3251,7 @@ footer.active .mod-footer-toggle {
 
 .mod-artist-collection-cta {
   bottom: 7px;
-  color: #3056FA;
+  color: #281c47;
   left: 0;
   position: absolute;
   right: 0; }
@@ -3774,5 +3774,26 @@ footer.active .mod-footer-toggle {
 
 .mod-index-module-title {
   word-spacing: 99999px; }
+
+nav {
+  height: 58px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #ff9a6e; }
+
+section {
+  min-height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute; }
+  section .section-inner {
+    width: 50%;
+    min-height: 100%;
+    float: left; }
+  section .section-left {
+    background-color: #281c47; }
 
 /*# sourceMappingURL=style.css.map */

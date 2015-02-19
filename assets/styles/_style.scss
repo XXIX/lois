@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 // Important: Import variables first to override default Stencil variables
-@import "variables";
+@import "_variables";
 
 // Import stencil before custom styles to allow overrides
 @import "stencil/stencil";
@@ -16,7 +16,7 @@
 @import "stencil/modules/sticky_footer";
 
 // Import modules
-@import "modules";
+@import "_modules";
 
 // Import custom styles
 @import "custom";

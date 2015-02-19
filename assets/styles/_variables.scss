@@ -1,4 +1,4 @@
-$nav-height:                             86px;
+$nav-height:                             58px;
 $footer-height:                          60px;
 $product-filter-height:                  50px;
 $product-toggle-width:                   870px;
@@ -6,10 +6,11 @@ $product-toggle-width:                   870px;
 $text-xxs:                               12px;
 $text-xs:                                15px;
 $text-s:                                 20px;
-$text-m:                                 30px;
-$text-l:                                 40px;
-$text-xl:                                75px;
-$text-xxl:                               150px;
+$text-m:                                 25px;
+$text-l:                                 28px;
+$text-xl:                                70px;
+$text-xxl:                               100px;
+$text-xxxl:                              140px;
 
 $line-xxs:                               0.8;
 $line-xs:                                1.0;
@@ -19,15 +20,15 @@ $line-l:                                 1.6;
 $line-xl:                                1.8;
 $line-xxl:                               2.0;
 
-$text-light-family:                      'Relative-Medium';
+$text-light-family:                      'Visuelt-Medium';
 $text-light-weight:                      normal;
 $text-light-style:                       normal;
 
-$text-regular-family:                    'Relative-Book';
+$text-regular-family:                    'Visuelt-Book';
 $text-regular-weight:                    normal;
 $text-regular-style:                     normal;
 
-$text-bold-family:                       'Relative-Bold';
+$text-bold-family:                       'Visuelt-Bold';
 $text-bold-weight:                       normal;
 $text-bold-style:                        normal;
 
@@ -36,7 +37,8 @@ $color-muted:                            #8B8D90;
 $color-line:                             #C9CBCC;
 $product-bg:                             #EFEFEF;
 $color-out:                              #FF0000;
-$color-blue:                             #3056FA;
+$color-blue:                             #281c47;
+$color-bronze:                           #ff9a6e;
 
 $space-xxs:                              2px;
 $space-xs:                               5px;
