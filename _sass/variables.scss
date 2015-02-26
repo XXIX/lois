@@ -1,0 +1,62 @@
+$nav-height:                             58px;
+$footer-height:                          60px;
+$product-filter-height:                  50px;
+$product-toggle-width:                   870px;
+
+$text-xxs:                               12px;
+$text-xs:                                15px;
+$text-s:                                 20px;
+$text-m:                                 25px;
+$text-l:                                 28px;
+$text-xl:                                70px;
+$text-xxl:                               100px;
+$text-xxxl:                              140px;
+
+$line-xxs:                               0.8;
+$line-xs:                                1.0;
+$line-s:                                 1.25;
+$line-m:                                 1.4;
+$line-l:                                 1.6;
+$line-xl:                                1.8;
+$line-xxl:                               2.0;
+
+$text-light-family:                      "Visuelt Light", 'Helvetica Neue', 'Segoe UI', sans-serif;
+$text-light-weight:                      normal;
+$text-light-style:                       normal;
+
+$text-regular-family:                    "Visuelt Regular", 'Helvetica Neue', 'Segoe UI', sans-serif;
+$text-regular-weight:                    normal;
+$text-regular-style:                     normal;
+
+$text-bold-family:                       "Visuelt Black", 'Helvetica Neue', 'Segoe UI', sans-serif;
+$text-bold-weight:                       normal;
+$text-bold-style:                        normal;
+
+$color-base:                             black;
+$color-muted:                            #8B8D90;
+$color-line:                             #C9CBCC;
+$product-bg:                             #EFEFEF;
+$color-out:                              #FF0000;
+$color-blue:                             #281c47;
+$color-bronze:                           #ff9a6e;
+
+$space-xxs:                              2px;
+$space-xs:                               5px;
+$space-s:                                10px;
+$space-m:                                15px;
+$space-l:                                20px;
+$space-xl:                               30px;
+$space-xxl:                              60px;
+
+$letter-xxs:                             0.05em;
+$letter-xs:                              0.1em;
+$letter-s:                               0.2em;
+$letter-m:                               0.3em;
+$letter-l:                               0.5em;
+$letter-xl:                              1.0em;
+$letter-xxl:                             10px;
+
+
+%visuelt-light, .visuelt-light { font-family:"Visuelt Light", 'Helvetica Neue', 'Segoe UI', sans-serif; font-weight:200; font-style:normal; }
+%visuelt-regular, .visuelt-regular { font-family:"Visuelt Regular", 'Helvetica Neue', 'Segoe UI', sans-serif; font-weight:normal; font-style:normal; }
+%visuelt-black, .visuelt-black { font-family:"Visuelt Black", 'Helvetica Neue', 'Segoe UI', sans-serif; font-weight:800; font-style:normal; }

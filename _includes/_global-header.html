@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<meta charset="utf-8" />
-	<title>{{site.title}}</title>
-	<!-- force IE to latest -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- description -->
-	<meta name="description" content="{{site.meta['site description']}}" />
-	<!-- keywords -->
-	<meta name="keywords" content="{{site.meta['site keywords']}}" />
-	<!-- viewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-	<!-- rewrite URLs for @2x retina images -->
-	<script>
-	    if((window.devicePixelRatio===undefined?1:window.devicePixelRatio)>1)
-		document.cookie='HTTP_IS_RETINA=1;path=/';
-	</script>
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-	<![endif]-->
+  	<meta charset="utf-8" />
+  	<title>{{site.title}}</title>
+  	<!-- force IE to latest -->
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<!-- description -->
+  	<meta name="description" content="{{site.meta['site description']}}" />
+  	<!-- keywords -->
+  	<meta name="keywords" content="{{site.meta['site keywords']}}" />
+  	<!-- viewport -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  	<!-- rewrite URLs for @2x retina images -->
+  	<script>
+  	    if((window.devicePixelRatio===undefined?1:window.devicePixelRatio)>1)
+  		document.cookie='HTTP_IS_RETINA=1;path=/';
+  	</script>
 
-	<!-- css -->
-	<link href="/assets/styles/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/modernizr.js"></script>
+
+    <link rel="stylesheet" href="assets/application.css" />
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="assets/respond.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+    WebFontConfig = { fontdeck: { id: '53966' } };
+
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+    </script>
+
+    <script type="text/javascript" src="assets/application.js"></script>
 
 	</head>
 	<body class="{{type}}">
