@@ -4,7 +4,7 @@
 .gitignore
 Gruntfile.coffee
 _index.html
-_sass
-_scripts
-_lib
-node_modules
+_sass/
+_scripts/
+_lib/
+node_modules/
