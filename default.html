@@ -4,6 +4,8 @@
 
 
 
+
+
 <nav>
 	<div class="nav-extended" style="display: none;">
 		<div class="container-fluid">
@@ -65,16 +67,18 @@
 	</div>
 </section>
 
+{% for page in pages %}
+{% if page.slug == 'wine' %}
 <section class="wine" id="wine">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="section-inner section-left">
-			<div class="is-padded">
-  				<h2>Wine</h2>
-  				<p>We serve a rotating menu of wines on tap and seasonal small plates. We believe that good food does not need to be overwrought or fancy and that wine should be exciting, never intimidating. At Lois, they never are.</p>
-  				<p>We chose to do all our wines on tap instead of traditional bottles to reduce waste, make our prices good, and keep.</p>
-  				<a href="http://www.instagram.com/lois-taps" target="_blank"><div class="button">See what‘s on tap</div></a>
-				<img src="assets/img/test.jpg" alt="test" />
+				<div class="is-padded">
+	  				<h2>{{page.title}}</h2>
+	  				{{page.body}}
+	  				<a href="http://www.instagram.com/lois-taps" target="_blank"><div class="button">See what‘s on tap</div></a>
+					<img src="assets/img/test.jpg" alt="test" />
+				</div>
 			</div>
 			<div class="section-inner section-right">
 				<img src="assets/img/test.jpg" alt="test" />
@@ -82,6 +86,12 @@
 		</div>
 	</div>
 </section>
+  {% else %}
+  <section class="wine" id="wine">
+    foo
+  </section>
+  {% endif %}
+  {% endfor %}
 
 <section class="food" id="food">
 	<div class="container-fluid">
@@ -192,6 +202,8 @@
 		</div>
 	</div>
 </section>
+
+
 
 
 {% include 'includes/_global-footer' %}
