@@ -40,7 +40,16 @@
     })();
     </script>
 
-    <script type="text/javascript" src="assets/application.js"></script>
+    <script type="text/javascript" src="assets/application.min.js"></script>
+
+    <script>
+		$(document).ready(function() {
+		   $('nav').mouseenter(function() {
+				$('.nav-extended').slideDown('fast');
+				console.log('foozz');
+			});
+		});
+    </script>
 
 	</head>
 	<body class="{{type}}">

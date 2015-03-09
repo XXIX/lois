@@ -996,4 +996,6 @@
 
   $(window).load(function() {});
 
+  console.log('foobar');
+
 }).call(this);
