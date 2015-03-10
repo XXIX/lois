@@ -106,7 +106,7 @@
 			  			<div class="section-content is-padded">
 			  				<h2>{{page.title}}</h2>
 			  				{{page.body}}
-			  				<p class="small text-center margin-top-l">Lois was designed with love by<br>[Michael J Groth](http://www.michaelgroth.co/)</p>
+			  				<p class="small text-center margin-top-l">{{page.meta['credits'] }}</p>
 						</div>
 						<hr class="white">
 					</div>
@@ -116,6 +116,8 @@
 				</div>
 			</div>
 		</section>
+
+		<div class="clear"></div>
 
 	{% elsif page.slug == 'press' %}
 
@@ -155,26 +157,7 @@
 			  			<div class="section-content is-padded">
 			  				<h2>{{page.title}}</h2>
 			  				{{page.body}}
-
 						</div>
-						<hr class="white">
-					</div>
-					<div class="section-inner section-right">
-						<div class="img-container" style="background-image: url({{page.meta['featured image']}})"></div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-	{% elsif page.slug == 'thanks' %}
-
-		<section class="thanks" id="thanks">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="section-inner section-left">
-			  			<div class="section-content is-padded">
-			  				{{page.body}}
-			  			</div>
 					</div>
 					<div class="section-inner section-right">
 						<div class="img-container" style="background-image: url({{page.meta['featured image']}})"></div>
@@ -187,9 +170,10 @@
 
 {% endfor %}
 
-<div class="corner corner-tr"></div>
-<div class="corner corner-br"></div>
-<div class="corner corner-bl"></div>
-<div class="corner corner-tl"></div>
+<div class="border border-btm"></div>
+<div class="corner corner-top corner-right"></div>
+<div class="corner corner-bottom corner-right"></div>
+<div class="corner corner-bottom corner-left"></div>
+<div class="corner corner-top corner-left"></div>
 
 {% include 'includes/_global-footer' %}
