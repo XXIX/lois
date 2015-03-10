@@ -10,11 +10,3 @@ $ ->
 
 # Window Loaded
 $(window).load ->
-
-/*
-$('nav').mouseenter(function() {
-	$('.nav-extended').slideDown();
-});
-*/
-
-console.log('foobar');

@@ -2,35 +2,112 @@
   @include border-box();
 }
 
-
-
 html,
 body {
   height:100%;
   color: white;
-  //font-family: $text-light-family;
   @extend %visuelt-light, %letter-xs;
 }
+
+a {
+text-decoration: none;
+color: inherit;
+
+	&:hover {
+		color: inherit;
+	}
+
+	&:focus, &:visited, &:active {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.text-center {
+  @extend %text-center;
+}
+
+p {
+	@extend %visuelt-light, %text-l, %line-m, %letter-xs;
+	margin-bottom: 50px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+  &.small {
+    @extend %text-xs;
+  }
+
+  a {
+    color: $color-bronze;
+    text-decoration: none;
+
+    &:hover {
+	    color: lighten($color-bronze, 10%);
+    }
+
+    &:focus, &:visited, &:active {
+      color: $color-bronze;
+    }
+  }
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+@extend %line-l;
+}
+
+strong, .text-strong, %text-strong, em, .text-em, %text-em {
+@extend %visuelt-regular;
+}
+
+img {
+	max-width: 100%;
+}
+
+hr {
+  width: 100%;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  margin: 50px auto;
+  display: block;
+  border: 0;
+
+  &.white {
+    background-image: url(../assets/separator-white.png);
+  }
+  &.blue {
+    background-image: url(../assets/separator-blue.png);
+  }
+}
+
+
+/*--------------------------*/
 
 .outer-wrapper {
 
 }
 
 nav {
-	@extend %visuelt-regular;
-	width: 100%;
 	position: fixed;
-	top: 0;
+	width: 100%;
+	top: -1px; //hide top border
 	left: 0;
 	z-index: 999;
 	background-color: $color-bronze;
 	display: none;
+	@extend %visuelt-regular;
 	@include tab {
 		display: block;
 		}
 
 	.nav-min {
 		height: $nav-height;
+		border-top: 1px solid $color-blue;
 	}
 
 	.nav-extended {
@@ -45,26 +122,45 @@ nav {
 				display: inline-block;
 				margin: 0 40px;
 				@extend %text-s;
-			}
-		}
 
-		h3 {
-			@extend %text-l, %line-l;
+				a:hover {
+					border-bottom: 2px solid $color-blue;
+				}
+			}
 		}
 	}
 
+	h3 {
+		margin-bottom: 40px;
+		@extend %text-m, %line-l;
 
+		img, span {
+			display: inline-block;
+		}
+
+		span {
+			margin: 0 30px;
+		}
+	}
 
 	h4 {
-		margin-top: 10px;
+		margin-top: 6px;
+		@extend %text-s;
 	}
 
 	.nav-inner {
-		width: 33.3%;
 		float: left;
 		padding: 10px 0;
 		text-align: center;
 		color: $color-blue;
+
+		&.nav-left, &.nav-right {
+			width: 47%;
+		}
+
+		&.nav-center {
+			width: 6%;
+		}
 	}
 
 	.nav-center img {
@@ -76,7 +172,7 @@ nav {
 section {
 	min-height: 100%;
 	width: 100%;
-	height: 100%;
+	//height: 100%;
 	//border-bottom: 1px red solid;
 
 	&:first-of-type {
@@ -114,6 +210,10 @@ section {
 		@include tab {
 			border: none;
 			}
+
+		hr {
+			margin: 80px auto 0;
+		}
 	}
 
 	.section-right {
@@ -124,10 +224,19 @@ section {
 }
 
 .section-right {
-@extend %is-padded;
+// @extend %is-padded;
 
   img {
     margin-top: 75%;
+  }
+
+  .img-container {
+	  height: 100%;
+	  width: 100%;
+	  position: absolute;
+	  background-size: 80% auto;
+	  background-position: center center;
+	  background-repeat: no-repeat;
   }
 }
 
@@ -136,14 +245,16 @@ section {
   h2 {
     font-size: $text-xxl;
     line-height: $line-xs;
-    letter-spacing: $letter-m;
+    letter-spacing: $letter-s;
     margin-bottom: 50px;
-    @extend %text-center;
   }
 
   p {
+/*
     font-size: $text-m;
     line-height: $line-l;
+*/
+/*
     letter-spacing: $letter-xs;
     margin-bottom: 30px;
     @extend %visuelt-light;
@@ -151,6 +262,7 @@ section {
     &:last-of-type {
       margin-bottom: 0;
     }
+*/
   }
 
   img {
@@ -158,16 +270,25 @@ section {
   }
 }
 
+%is-padded, .is-padded {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/*------------------------*/
+/*-------  mod -----------*/
+/*------------------------*/
+
 section.hero {
 
   h1 {
+	 display: none;
     position: absolute;
-    bottom: 50px;
-    margin: 0 auto;
     width: 100%;
+    bottom: 30px;
+    margin: 0 auto;
     font-size: $text-xl;
     @extend %text-center, %letter-xxl;
-    display: none;
     @include tab {
 	    display: block;
 	    }
@@ -201,37 +322,64 @@ section.hero {
 }
 
 section.press {
+ @extend %text-center;
 
+	.section-content {
 
-  h3 {
-    margin-bottom: 50px;
-    padding: 0 30px;
-    font-size: $text-l;
-    line-height: $line-m;
-    color: $color-bronze;
-    @extend %text-center;
-    @extend %visuelt-black;
-  }
+		h3 {
+			margin-top: 50px;
+			margin-bottom: 20px;
+			padding: 0 30px;
+			color: $color-bronze;
+			font-size: 35px;
+			@extend %visuelt-light;
+		}
 
-  img {
-    margin: 0 auto 50px;
-  }
+		p {
+		  @extend %text-s;
+		}
+
+		img {
+			margin: 0 auto 50px;
+			max-width: 250px;
+			height: auto;
+		}
+
+		hr.separator {
+		  margin: 50 auto;
+
+		  &:last-of-type {
+			  display: none;
+		  }
+		}
+	}
+}
+
+section.thanks {
+
+	.section-content {
+		position: absolute;
+		width: 100%;
+		bottom: 50px;
+	}
+
+	p {
+		@extend %text-s, %text-center;
+	}
 }
 
 .button {
   $button-height: 80px;
-  width: 60%;
-  margin: 50px auto;
-  padding: 0 20px;
+
   height: $button-height;
-  font-size: $text-xs;
   line-height: $button-height;
-  letter-spacing: $space-xs;
+  width: auto;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 0 20px;
   border: 0;
   background-color: darken($color-blue, 5%);
-  @extend %visuelt-black;
-  @extend %text-center;
-
+  @extend %visuelt-regular, %text-center, %letter-m, %text-s;
   &:hover {
     background-color: darken($color-blue, 10%);
     color: white;
@@ -239,7 +387,7 @@ section.press {
 }
 
 .is-full-height {
-padding: 0;
+padding: 0 !important;
 
   .section-inner {
     padding: 0;
@@ -254,78 +402,33 @@ padding: 0;
   }
 }
 
+.hours {
+	@extend %letter-m;
 
+	sup {
+		font-size: 10px;
+		margin-top: -3px;
+		display: inline-block;
+	}
 
-.text-center {
-  @extend %text-center;
+	span {
+		width: 30px;
+		display: inline-block;
+	}
 }
 
-img {
-	max-width: 100%;
+.section-content {
+
+	ul {
+		margin-top: 50px;
+
+		li {
+			margin-bottom: 50px;
+		}
+	}
 }
 
-%is-padded, .is-padded {
-  padding-left: 80px;
-  padding-right: 80px;
-}
-
-
-hr {
-  width: 100%;
-  height: 15px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  margin: 50px auto;
-  display: block;
-  border: 0;
-
-  &.white {
-    background-image: url(../assets/separator-white.png);
-  }
-  &.blue {
-    background-image: url(../assets/separator-blue.png);
-  }
-}
-
-a {
-text-decoration: none;
-color: inherit;
-
-  &:hover {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  &:focus {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  &:visited {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  &:active {
-    text-decoration: none;
-    color: inherit;
-  }
-}
-
-p {
-
-  &.small {
-    font-size: $text-xs;
-  }
-
-  a {
-    color: $color-bronze;
-
-    &:visited {
-      color: inherit;
-    }
-  }
-
+img.separator {
+	width: 20px;
+	height: auto;
 }
