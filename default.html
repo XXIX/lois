@@ -22,8 +22,8 @@
 			<div class="nav-inner nav-center">
 				<a href="/"><img src="assets/logo-filled-blue.png" alt="logo-filled-blue" /></a>
 			</div>
-			<div class="nav-inner nav-right hours">
-				<h4>{{site.meta['hours']}}</h4>
+			<div class="nav-inner nav-right">
+				<h4 class="hours">{{site.meta['hours']}}</h4>
 			</div>
 		</div>
 	</div>
@@ -39,7 +39,7 @@
 						<img class="logo" src="assets/logo-filled-bronze.png" alt="logo-filled-bronze" />
 						<hgroup>
 							<h4>{{site.meta['address']}}</h4>
-							<h4>{{site.meta['hours']}}</h4>
+							<h4 class="hours">{{site.meta['hours']}}</h4>
 						</hgroup>
 					</div>
 					<h1>Lois</h1>
@@ -106,7 +106,6 @@
 			  			<div class="section-content is-padded">
 			  				<h2>{{page.title}}</h2>
 			  				{{page.body}}
-			  				<p class="small text-center margin-top-l">{{page.meta['credits'] }}</p>
 						</div>
 						<hr class="white">
 					</div>
@@ -155,6 +154,7 @@
 			  			<div class="section-content is-padded">
 			  				<h2>{{page.title}}</h2>
 			  				{{page.body}}
+			  				<p class="small text-center credits">{{page.meta['credits'] }}</p>
 						</div>
 					</div>
 					<div class="section-inner section-right">

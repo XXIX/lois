@@ -292,6 +292,7 @@ section.hero {
 	  position: absolute;
 	  height: 100%;
 	  width: 100%;
+	  z-index: 999;
 	  background: transparentize($color-blue, .5);
 	  @include tab {
 		  display: none;
@@ -381,26 +382,6 @@ section.thanks {
 }
 
 /*------------- components -------------*/
-
-/*
-.is-full-height {
-padding: 0 !important;
-width: 50%;
-
-  .section-inner {
-    padding: 0;
-  }
-
-  .img-container {
-    height: 100%;
-    width: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    position: absolute;
-  }
-}
-*/
 
 .hours {
 	@extend %letter-m;
