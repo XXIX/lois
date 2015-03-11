@@ -1,0 +1,177 @@
+{% include 'includes/_global-header' %}
+
+<nav>
+	<div class="nav-extended" style="display: none;">
+		<div class="container-fluid">
+			<div class="row">
+				<ul id="nav-list">
+					<li><a href="#wine">Wine</a></li>
+					<li><a href="#food">Food</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#press">Press</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="nav-min">
+		<div class="row">
+			<div class="nav-inner nav-left">
+				<h4><a href="https://www.google.com/maps/place/98+Loisaida+Ave,+New+York,+NY+10009/data=!4m2!3m1!1s0x89c25979c71ec581:0x5d1bc6c930c30f72?sa=X&ei=40j_VJT8FO6_sQTj9IK4Aw&ved=0CB4Q8gEwAA" target="_blank">{{site.meta['address']}}</a></h4>
+			</div>
+			<div class="nav-inner nav-center">
+				<a href="/"><img src="assets/logo-filled-blue.png" alt="logo-filled-blue" /></a>
+			</div>
+			<div class="nav-inner nav-right">
+				<h4 class="hours">{{site.meta['hours']}}</h4>
+			</div>
+		</div>
+	</div>
+</nav>
+
+{% if home? %}
+
+	<section class="hero" id="hero">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="section-inner section-left">
+					<div class="mobile-hero">
+						<img class="logo" src="assets/logo-filled-bronze.png" alt="logo-filled-bronze" />
+						<hgroup>
+							<h4>{{site.meta['address']}}</h4>
+							<h4 class="hours">{{site.meta['hours']}}</h4>
+						</hgroup>
+					</div>
+					<h1>Lois</h1>
+					<div class="img-hero" style="background-image: url({{meta['home image']}});"></div>
+				</div>
+				<div class="section-inner section-right">
+		  			<div class="img-container" style="background-image: url({{meta['featured image']}})"></div>
+					<h1>Lois</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endif %}
+
+{% for page in pages %}
+
+	{% if page.slug == 'wine' %}
+
+		<section class="wine" id="wine">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="section-inner section-left">
+						<div class="section-content is-padded">
+			  				<h2>{{page.title}}</h2>
+			  				{{page.body}}
+			  				<a href="http://www.instagram.com/lois-taps" target="_blank"><div class="button">See what’s on tap</div></a>
+						</div>
+						<hr class="white">
+					</div>
+					<div class="section-inner section-right">
+						<div class="img-container" style="background-image: url({{page.meta['featured image']}})"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	{% elsif page.slug == 'food' %}
+
+		<section class="food" id="food">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="section-inner section-left">
+			  			<div class="section-content is-padded">
+			  				<h2>{{page.title}}</h2>
+			  				{{page.body}}
+						</div>
+						<hr class="white">
+					</div>
+					<div class="section-inner section-right">
+						<div class="img-container" style="background-image: url({{page.meta['featured image']}})"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	{% elsif page.slug == 'about' %}
+
+		<section class="about" id="about">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="section-inner section-left">
+			  			<div class="section-content is-padded">
+			  				<h2>{{page.title}}</h2>
+			  				{{page.body}}
+						</div>
+						<hr class="white">
+					</div>
+					<div class="section-inner section-right">
+						<div class="img-container" style="background-image: url({{page.meta['featured image']}})"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	{% elsif page.slug == 'press' %}
+
+		<section class="press" id="press">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="section-inner section-left">
+			  			<div class="section-content is-padded">
+			  				<h2>{{page.title}}</h2>
+			  				{{page.body}}
+
+			  				{% for post in page.posts %}
+			  				<a href="{{meta['press url']}}">
+			    				<div class="press-item">
+			    					<h3>{{post.title}}</h3>
+			    					{{post.body}}
+			    				</div>
+			  				</a>
+			  				<hr class="separator white">
+			  				{% endfor %}
+			  			</div>
+			  			<hr class="white">
+					</div>
+					<div class="section-inner section-right">
+						<div class="img-container" style="background-image: url({{page.meta['featured image']}})"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	{% elsif page.slug == 'contact' %}
+
+		<section class="contact" id="contact">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="section-inner section-left">
+			  			<div class="section-content is-padded">
+			  				<h2>{{page.title}}</h2>
+			  				{{page.body}}
+			  				<p class="small text-center credits">{{page.meta['credits'] }}</p>
+						</div>
+					</div>
+					<div class="section-inner section-right">
+						<div class="img-container" style="background-image: url({{page.meta['featured image']}})"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	{% endif %}
+
+{% endfor %}
+
+<div class="border border-btm"></div>
+<div class="corner corner-top corner-right"></div>
+<div class="corner corner-bottom corner-right"></div>
+<div class="corner corner-bottom corner-left"></div>
+<div class="corner corner-top corner-left"></div>
+
+{% include 'includes/_global-footer' %}

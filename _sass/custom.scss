@@ -1,0 +1,483 @@
+* {
+  @include border-box();
+}
+
+html,
+body {
+  height:100%;
+  color: white;
+  @extend %visuelt-light, %letter-xs;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+
+	&:hover {
+		color: inherit;
+	}
+
+	&:focus, &:visited, &:active {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.text-center {
+  @extend %text-center;
+}
+
+p {
+	@extend %visuelt-light, %text-s, %tab-text-l, %line-m, %letter-xs;
+	margin-bottom: 50px;
+	@include tab {
+
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+  &.small {
+    @extend %text-xs;
+  }
+
+  a {
+    color: $color-bronze;
+    text-decoration: none;
+
+    &:hover {
+	    color: lighten($color-bronze, 10%);
+    }
+
+    &:focus, &:visited, &:active {
+      color: $color-bronze;
+    }
+  }
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+@extend %line-l;
+}
+
+strong, .text-strong, %text-strong, em, .text-em, %text-em {
+@extend %visuelt-regular;
+}
+
+img {
+	max-width: 100%;
+}
+
+hr {
+  width: 100%;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  margin: 50px auto;
+  display: block;
+  border: 0;
+
+  &.white {
+    background-image: url(../assets/separator-white.png);
+  }
+  &.blue {
+    background-image: url(../assets/separator-blue.png);
+  }
+}
+
+
+/*------------- nav -------------*/
+
+nav {
+	position: fixed;
+	width: 100%;
+	top: -1px; //hide top border
+	left: 0;
+	z-index: 999999;
+	background-color: $color-bronze;
+	display: none;
+	@extend %visuelt-regular;
+	@include tab {
+		display: block;
+		}
+
+	.nav-min {
+		height: $nav-height;
+		border-top: 1px solid $color-blue;
+	}
+
+	.nav-extended {
+		color: $color-blue;
+		background-color: $color-bronze;
+		text-align: center;
+
+		ul {
+		padding: 40px 0;
+
+			li {
+				display: inline-block;
+				margin: 0 40px;
+				@extend %text-s;
+
+				a:hover {
+					border-bottom: 2px solid $color-blue;
+				}
+			}
+		}
+	}
+
+	h3 {
+		margin-bottom: 40px;
+		@extend %text-m, %line-l;
+
+		img, span {
+			display: inline-block;
+		}
+
+		span {
+			margin: 0 30px;
+		}
+	}
+
+	h4 {
+		margin-top: 6px;
+		@extend %text-s;
+	}
+
+	.nav-inner {
+		float: left;
+		padding: 10px 0;
+		text-align: center;
+		color: $color-blue;
+
+		&.nav-left, &.nav-right {
+			width: 47%;
+		}
+
+		&.nav-center {
+			width: 6%;
+		}
+	}
+
+	.nav-center img {
+		height: $nav-height - 20px;
+		width: auto;
+	}
+}
+
+/*------------- layout -------------*/
+
+section {
+	min-height: 100%;
+	width: 100%;
+
+	&:first-of-type {
+		border-top: 10px solid $color-bronze;
+		@include tab {
+			border: none;
+			}
+	}
+
+	.section-inner {
+		width: 100%;
+		min-height: 100%;
+ 		position: relative;
+		float: left;
+		@include tab {
+	      width: 50%;
+	      }
+	}
+
+	.section-left {
+		//left: 0;
+		background-color: $color-blue;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		min-height: 100%;
+		border-left: 10px solid $color-bronze;
+		border-right: 10px solid $color-bronze;
+		@include tab {
+			border: none;
+			}
+
+		hr {
+			margin: 80px auto 0;
+		}
+	}
+
+	.section-right {
+		color: $color-blue;
+		@extend %is-hidden, %tab-block;
+	}
+}
+
+.section-right {
+
+  img {
+    margin-top: 75%;
+  }
+
+  .img-container {
+	  height: 1000px;
+	  width: 500px;
+	  margin: 0 auto;
+	  position: relative;
+	  background-size: contain;
+	  background-position: center center;
+	  background-repeat: no-repeat;
+  }
+}
+
+.section-left {
+
+  h2 {
+    @extend %text-l, %tab-text-xxl;
+    line-height: $line-xs;
+    letter-spacing: $letter-s;
+    margin-bottom: 50px;
+    @include tab {
+	    //@extend %text-xxl;
+	    }
+  }
+
+  img {
+    margin-top: 100px;
+  }
+}
+
+%is-padded, .is-padded {
+  padding-left: 20px;
+  padding-right: 20px;
+  @include tab {
+		padding-left: 80px;
+		padding-right: 80px;
+		}
+}
+
+/*------------- modules -------------*/
+
+section.hero {
+
+	.section-inner {
+		padding: 0 !important;
+	}
+
+	.img-hero {
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		position: absolute;
+	}
+
+	h1 {
+		display: none;
+		position: absolute;
+		width: 100%;
+		bottom: 30px;
+		margin: 0 auto;
+		z-index: 999;
+		font-size: $text-xl;
+		@extend %text-center, %letter-xxl;
+		@include tab {
+			display: block;
+			}
+	}
+
+  .mobile-hero {
+	  position: absolute;
+	  height: 100%;
+	  width: 100%;
+	  z-index: 999;
+	  background: transparentize($color-blue, .5);
+	  @include tab {
+		  display: none;
+		  }
+
+	  img.logo {
+		  width: 50%;
+		  height: auto;
+	  }
+
+	  hgroup {
+		  position: absolute;
+		  bottom: 50px;
+		  margin: 0 auto;
+		  width: 100%;
+
+		  h4 {
+			  @extend %text-m, %line-l, %text-center;
+		  }
+	  }
+  }
+}
+
+section.press {
+ @extend %text-center;
+
+	.section-content {
+
+		h3 {
+			margin-top: 50px;
+			margin-bottom: 20px;
+			padding: 0 30px;
+			color: $color-bronze;
+			font-size: 35px;
+			@extend %visuelt-light;
+		}
+
+		p {
+		  @extend %text-s;
+		}
+
+		img {
+			margin: 0 auto 50px;
+			max-width: 250px;
+			height: auto;
+		}
+
+		hr.separator {
+		  margin: 50 auto;
+
+		  &:last-of-type {
+			  display: none;
+		  }
+		}
+	}
+}
+
+section.thanks {
+
+	.section-content {
+		position: absolute;
+		width: 100%;
+		bottom: 50px;
+	}
+
+	p {
+		@extend %text-s, %text-center;
+	}
+}
+
+.button {
+  $button-height: 80px;
+
+  height: $button-height;
+  line-height: $button-height;
+  width: auto;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 0 20px;
+  border: 0;
+  background-color: darken($color-blue, 5%);
+  @extend %visuelt-regular, %text-center, %letter-m, %text-s;
+  &:hover {
+    background-color: darken($color-blue, 10%);
+    color: white;
+  }
+}
+
+/*------------- components -------------*/
+
+.hours {
+	@extend %letter-m;
+
+	sup {
+		font-size: 10px;
+		margin-top: -3px;
+		display: inline-block;
+	}
+
+	span {
+		width: 30px;
+		display: inline-block;
+	}
+}
+
+.section-content {
+
+	ul {
+		margin-top: 50px;
+
+		li {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+img.separator {
+	width: 20px;
+	height: auto;
+}
+
+.border {
+
+	&.border-btm {
+		height: 10px;
+		width: 100%;
+		background-color: $color-bronze;
+		position: fixed;
+		bottom: 0;
+		@include tab {
+			position: relative;
+		}
+	}
+}
+
+.corner {
+$corner-size: 50px;
+position: fixed;
+height: $corner-size;
+width: $corner-size;
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+z-index: 999999999;
+@include tab {
+	display: none;
+}
+
+	&.corner-top {
+		top: 0;
+	}
+
+	&.corner-right {
+		right: 0;
+	}
+
+	&.corner-bottom {
+		bottom: 0;
+	}
+
+	&.corner-left {
+		left: 0;
+	}
+
+	&.corner-top.corner-right {
+		background-image: url(../assets/corner-tr.png);
+	}
+
+	&.corner-bottom.corner-right {
+		background-image: url(../assets/corner-br.png);
+	}
+
+	&.corner-bottom.corner-left {
+		background-image: url(../assets/corner-bl.png);
+	}
+
+	&.corner-top.corner-left {
+		background-image: url(../assets/corner-tl.png);
+	}
+}
+
+
+
+
+
+
+
+
