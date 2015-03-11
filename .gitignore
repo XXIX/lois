@@ -33,6 +33,7 @@ codekit-config.json
 *.log
 *.sql
 *.sqlite
+*.sass-cache
 
 # OS generated files #
 ######################
