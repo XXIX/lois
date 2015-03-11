@@ -34,7 +34,7 @@
 	<section class="hero" id="hero">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="section-inner section-left is-full-height">
+				<div class="section-inner section-left">
 					<div class="mobile-hero">
 						<img class="logo" src="assets/logo-filled-bronze.png" alt="logo-filled-bronze" />
 						<hgroup>
@@ -43,7 +43,7 @@
 						</hgroup>
 					</div>
 					<h1>Lois</h1>
-					<div class="img-container" style="background-image: url({{meta['home image']}});"></div>
+					<div class="img-hero" style="background-image: url({{meta['home image']}});"></div>
 				</div>
 				<div class="section-inner section-right">
 		  			<div class="img-container" style="background-image: url({{meta['featured image']}})"></div>
@@ -116,8 +116,6 @@
 				</div>
 			</div>
 		</section>
-
-		<div class="clear"></div>
 
 	{% elsif page.slug == 'press' %}
 
