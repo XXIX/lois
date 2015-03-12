@@ -36,6 +36,13 @@ $(document).ready(function() {
 	  });
 	}
 
+	// scroll to top
+	$(document).ready(function(){
+		$('#top').click(function() {
+			$("html, body").animate({ scrollTop: 0 }, "fast");
+		});
+	});
+
 	verticalCenter();
 		$(window).resize(function() {
 			verticalCenter();

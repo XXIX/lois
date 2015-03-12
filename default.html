@@ -20,7 +20,7 @@
 				<h4><a href="https://www.google.com/maps/place/98+Loisaida+Ave,+New+York,+NY+10009/data=!4m2!3m1!1s0x89c25979c71ec581:0x5d1bc6c930c30f72?sa=X&ei=40j_VJT8FO6_sQTj9IK4Aw&ved=0CB4Q8gEwAA" target="_blank">{{site.meta['address']}}</a></h4>
 			</div>
 			<div class="nav-inner nav-center">
-				<a href="/"><img src="assets/logo-filled-blue.png" alt="logo-filled-blue" /></a>
+				<a id="top"><img src="assets/logo-filled-blue.png" alt="logo-filled-blue" /></a>
 			</div>
 			<div class="nav-inner nav-right">
 				<h4 class="hours">{{site.meta['hours']}}</h4>
@@ -127,7 +127,7 @@
 			  				{{page.body}}
 
 			  				{% for post in page.posts %}
-			  				<a href="{{meta['press url']}}">
+			  				<a href="{{post.meta['press url']}}" target="_blank">
 			    				<div class="press-item">
 			    					<h3>{{post.title}}</h3>
 			    					{{post.body}}

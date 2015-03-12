@@ -162,9 +162,16 @@ nav {
 		}
 	}
 
-	.nav-center img {
-		height: $nav-height - 20px;
-		width: auto;
+	.nav-center {
+
+		&:hover {
+			cursor: n-resize;
+		}
+
+		img {
+			height: $nav-height - 20px;
+			width: auto;
+		}
 	}
 }
 
@@ -393,8 +400,12 @@ section.thanks {
 	}
 
 	span {
-		width: 30px;
-		display: inline-block;
+		width: 20px;
+		display: block;
+		@include tab {
+			width: 30px;
+			display: inline-block;
+			}
 	}
 }
 
