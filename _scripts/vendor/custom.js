@@ -17,7 +17,11 @@ $(document).ready(function() {
 		var imgContainer = $('.img-container');
 
 		// set height of sections
-		$('.section-inner').css('min-height', sectionMinHeight);
+		if (($(window).innerWidth()) > 480) {
+			$('.section-inner').css('min-height', sectionMinHeight);
+		} else {
+			//
+		}
 
 		// set size and position of featured image
 		$(imgContainer).css('height', sectionMinHeight);

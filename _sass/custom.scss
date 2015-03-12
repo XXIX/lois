@@ -28,11 +28,11 @@ color: inherit;
 }
 
 p {
-	@extend %visuelt-light, %text-s, %tab-text-l, %line-m, %letter-xs;
 	margin-bottom: 50px;
+	@extend %visuelt-light, %text-s, %tab-text-m, %lap-text-l, %line-m, %letter-xs;
 	@include tab {
 
-	}
+		}
 
 	&:last-of-type {
 		margin-bottom: 0;
@@ -178,28 +178,27 @@ nav {
 /*------------- layout -------------*/
 
 section {
-	min-height: 100%;
 	width: 100%;
 
 	&:first-of-type {
 		border-top: 10px solid $color-bronze;
 		@include tab {
+			min-height: 100%;
 			border: none;
 			}
 	}
 
 	.section-inner {
 		width: 100%;
-		min-height: 100%;
  		position: relative;
-		float: left;
 		@include tab {
+			float: left;
+			min-height: 100%;
 	      width: 50%;
 	      }
 	}
 
 	.section-left {
-		//left: 0;
 		background-color: $color-blue;
 		padding-top: 80px;
 		padding-bottom: 80px;
@@ -241,12 +240,13 @@ section {
 .section-left {
 
   h2 {
-    @extend %text-l, %tab-text-xxl;
-    line-height: $line-xs;
-    letter-spacing: $letter-s;
     margin-bottom: 50px;
+    @extend %text-l, %letter-xs, %line-xs;
     @include tab {
-	    //@extend %text-xxl;
+	    font-size: 70px;
+	    }
+    @include desk {
+	    font-size: 100px;
 	    }
   }
 
@@ -259,6 +259,10 @@ section {
   padding-left: 20px;
   padding-right: 20px;
   @include tab {
+		padding-left: 40px;
+		padding-right: 40px;
+		}
+  @include lap {
 		padding-left: 80px;
 		padding-right: 80px;
 		}
@@ -267,9 +271,15 @@ section {
 /*------------- modules -------------*/
 
 section.hero {
+	min-height: 100%;
 
 	.section-inner {
 		padding: 0 !important;
+		min-height: 100%;
+		position: absolute;
+		@include tab {
+			position: relative;
+		}
 	}
 
 	.img-hero {
@@ -331,10 +341,13 @@ section.press {
 		h3 {
 			margin-top: 50px;
 			margin-bottom: 20px;
-			padding: 0 30px;
 			color: $color-bronze;
-			font-size: 35px;
+			font-size: 30px;
 			@extend %visuelt-light;
+			@include lap {
+				padding: 0 30px;
+				font-size: 35px;
+				}
 		}
 
 		p {
@@ -342,7 +355,7 @@ section.press {
 		}
 
 		img {
-			margin: 0 auto 50px;
+			margin: 50px auto;
 			max-width: 250px;
 			height: auto;
 		}
@@ -426,16 +439,23 @@ img.separator {
 }
 
 .border {
+	z-index: 999;
+	position: fixed;
+	background-color: $color-bronze;
+	@include tab {
+		position: relative;
+		}
+
+	&.border-top {
+		height: 10px;
+		width: 100%;
+		top: 0;
+	}
 
 	&.border-btm {
 		height: 10px;
 		width: 100%;
-		background-color: $color-bronze;
-		position: fixed;
 		bottom: 0;
-		@include tab {
-			position: relative;
-		}
 	}
 }
 
