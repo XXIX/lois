@@ -201,7 +201,6 @@ section {
 	.section-left {
 		background-color: $color-blue;
 		padding-top: 80px;
-		padding-bottom: 80px;
 		min-height: 100%;
 		border-left: 10px solid $color-bronze;
 		border-right: 10px solid $color-bronze;
@@ -212,6 +211,13 @@ section {
 		hr {
 			margin: 80px auto 0;
 		}
+
+
+	}
+
+	// pad the bottom of the last section
+	&:last-of-type .section-left {
+	padding-bottom: 80px;
 	}
 
 	.section-right {
