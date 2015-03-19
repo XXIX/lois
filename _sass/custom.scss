@@ -29,9 +29,15 @@ color: inherit;
 
 p {
 	margin-bottom: 50px;
-	@extend %visuelt-light, %text-s, %tab-text-m, %lap-text-l, %line-m, %letter-xs;
+	@extend %visuelt-light, %text-s, %line-l, %letter-xs;
 	@include tab {
-
+		font-size: 22px;
+		}
+	@include lap {
+		font-size: 22px;
+		}
+	@include desk {
+		font-size: 28px;
 		}
 
 	&:last-of-type {
@@ -234,16 +240,18 @@ section {
 
   .img-container {
 	  height: 1000px;
-	  width: 500px;
+	  width: 100%;
 	  margin: 0 auto;
 	  position: relative;
 	  background-size: contain;
 	  background-position: center center;
 	  background-repeat: no-repeat;
+	  @extend %is-padded;
   }
 }
 
 .section-left {
+
 
   h2 {
     margin-bottom: 50px;
@@ -256,9 +264,18 @@ section {
 	    }
   }
 
-  img {
-    margin-top: 100px;
-  }
+	img {
+		margin: 100px auto 0;
+		width: 80%;
+		height: auto;
+		@include lap {
+			width: 80%;
+			}
+		@include desk {
+			max-width: 60%;
+			}
+
+	}
 }
 
 %is-padded, .is-padded {
@@ -269,6 +286,10 @@ section {
 		padding-right: 40px;
 		}
   @include lap {
+		padding-left: 60px;
+		padding-right: 60px;
+		}
+  @include desk {
 		padding-left: 80px;
 		padding-right: 80px;
 		}
@@ -304,8 +325,9 @@ section.hero {
 		bottom: 30px;
 		margin: 0 auto;
 		z-index: 999;
-		font-size: $text-xl;
-		@extend %text-center, %letter-xxl;
+		//font-size: $text-xl;
+		@extend %text-l, %line-m, %text-center;
+		//@extend %text-center, %letter-xxl;
 		@include tab {
 			display: block;
 			}

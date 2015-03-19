@@ -12,8 +12,8 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		var sectionMinHeight = $(window).height();
 
-		var sectionWidth = ($('.section-right').width()) * .7;
-		var sectionMaxHeight = sectionMinHeight * .5;
+		var sectionWidth = ($('.section-right').width()) * .8;
+		var sectionMaxHeight = sectionMinHeight * .6;
 		var imgContainer = $('.img-container');
 
 		// set height of sections
@@ -76,4 +76,3 @@ $(document).ready(function() {
 	    }
 	});
 });
-
