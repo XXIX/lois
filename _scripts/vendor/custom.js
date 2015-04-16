@@ -18,19 +18,30 @@ $(document).ready(function() {
 
 		// set height of sections
 		if (($(window).innerWidth()) > 480) {
-			$('.section-inner').css('min-height', sectionMinHeight);
+			$('.hero .section-inner').css('min-height', sectionMinHeight);
 		} else {
 			//
 		}
 
+/*
+		if (($(window).innerWidth()) > 480) {
+			$('.section-inner').css('min-height', sectionMinHeight);
+		} else {
+			//
+		}
+*/
+
 		// set size and position of featured image
+/*
 		$(imgContainer).css('height', sectionMinHeight);
 		$(imgContainer).css('width', sectionWidth);
 		$(imgContainer).css('max-height', sectionMaxHeight);
+*/
 
 	});
 
 	// vertical center
+/*
 	function verticalCenter() {
 		var parent = $('.section-right');
 		var child = parent.find('.img-container');
@@ -39,6 +50,7 @@ $(document).ready(function() {
 	    child.css('margin-top', topMargin);
 	  });
 	}
+*/
 
 	// scroll to top
 	$(document).ready(function(){
