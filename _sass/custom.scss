@@ -31,22 +31,18 @@ p {
 	margin-bottom: 50px;
 	@extend %visuelt-light, %text-s, %line-l, %letter-xs;
 	@include tab {
-		font-size: 22px;
+		font-size: 18px;
 		}
 	@include lap {
-		font-size: 22px;
+		//font-size: 22px;
 		}
 	@include desk {
-		font-size: 28px;
+		//font-size: 28px;
 		}
 
 	&:last-of-type {
 		margin-bottom: 0;
 	}
-
-  &.small {
-    @extend %text-xs;
-  }
 
   a {
     color: $color-bronze;
@@ -60,7 +56,11 @@ p {
       color: $color-bronze;
     }
   }
+}
 
+p.small,
+.small-text {
+	@extend %text-xs;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -150,7 +150,10 @@ nav {
 
 	h4 {
 		margin-top: 6px;
-		@extend %text-s;
+		font-size: 16px;
+		@include desk {
+			font-size: 18px;
+			}
 	}
 
 	.nav-inner {
@@ -228,6 +231,7 @@ section {
 
 	.section-right {
 		color: $color-blue;
+		padding: 0 40px;
 		@extend %is-hidden, %tab-block;
 	}
 }
@@ -235,7 +239,7 @@ section {
 .section-right {
 
   img {
-    margin-top: 75%;
+    //margin-top: 75%;
   }
 
   .img-container {
@@ -254,13 +258,16 @@ section {
 
 
   h2 {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     @extend %text-l, %letter-xs, %line-xs;
     @include tab {
-	    font-size: 70px;
+	    font-size: 40px;
 	    }
+    @include lap {
+	    margin-bottom: 30px;
+		 }
     @include desk {
-	    font-size: 100px;
+	    font-size: 50px;
 	    }
   }
 
@@ -326,7 +333,7 @@ section.hero {
 		margin: 0 auto;
 		z-index: 999;
 		//font-size: $text-xl;
-		@extend %text-l, %line-m, %text-center;
+		@extend %text-m, %line-m, %text-center;
 		//@extend %text-center, %letter-xxl;
 		@include tab {
 			display: block;
@@ -370,11 +377,11 @@ section.press {
 			margin-top: 50px;
 			margin-bottom: 20px;
 			color: $color-bronze;
-			font-size: 30px;
+			font-size: 25px;
 			@extend %visuelt-light;
 			@include lap {
 				padding: 0 30px;
-				font-size: 35px;
+				font-size: 30px;
 				}
 		}
 
@@ -450,13 +457,30 @@ section.thanks {
 	}
 }
 
+.credits {
+	margin-top: 50px;
+}
+
 .section-content {
 
 	ul {
 		margin-top: 50px;
 
 		li {
-			margin-bottom: 50px;
+			margin-bottom: 30px;
+
+			p {
+			@extend %text-xs;
+			@include tab {
+				font-size: 16px;
+				}
+			@include lap {
+				font-size: 18px;
+				}
+			@include desk {
+				font-size: 20px;
+				}
+			}
 		}
 	}
 }
