@@ -63,6 +63,11 @@ p.small,
 	@extend %text-xs;
 }
 
+p.large,
+.large-text {
+	@extend %text-m;
+}
+
 h1, h2, h3, h4, h5, h6 {
 @extend %line-l;
 }
@@ -85,6 +90,8 @@ hr {
   margin: 50px auto;
   display: block;
   border: 0;
+	  position: absolute;
+	  bottom: 0;
 
   &.white {
     background-image: url(../assets/separator-white.png);
@@ -259,9 +266,9 @@ section {
 	  margin: 0 auto;
 	  //position: absolute;
 	  background-size: auto 100%;
-	  background-position: center right;
+	  background-position: 100% center;
 	  background-repeat: no-repeat;
-	  background-color: red;
+	  background-color: $color-bronze;
 	  background-attachment: fixed;
 	  //@extend %is-padded;
   }
@@ -272,12 +279,13 @@ section {
 
   h2 {
     margin-bottom: 25px;
+    //text-align: center;
     @extend %text-l, %letter-xs, %line-xs;
     @include tab {
 	    font-size: 40px;
 	    }
     @include lap {
-	    margin-bottom: 30px;
+	    margin-bottom: 40px;
 		 }
     @include desk {
 	    font-size: 50px;
@@ -318,15 +326,24 @@ section {
 /*------------- modules -------------*/
 
 section.hero {
+
 	min-height: 100%;
 
 	.section-inner {
-		padding: 0 !important;
+		//padding: 0 !important;
 		min-height: 100%;
 		position: absolute;
 		@include tab {
-			position: relative;
+			position: absolute;
 		}
+	}
+
+	.section-left {
+		padding: 0;
+	}
+
+	.section-right {
+		padding: ($nav-height+80px) 80px 120px;
 	}
 
 	.img-hero {
@@ -340,11 +357,12 @@ section.hero {
 
 	h1 {
 		display: none;
-		position: absolute;
-		width: 100%;
+		//position: absolute;
+		line-height: 120px;
 		bottom: 30px;
 		margin: 0 auto;
 		z-index: 999;
+		text-align: center;
 		//font-size: $text-xl;
 		@extend %text-m, %line-m, %text-center;
 		//@extend %text-center, %letter-xxl;
@@ -381,6 +399,15 @@ section.hero {
   }
 }
 
+section.wine,
+section.food {
+
+	p {
+	font-size: 25px;
+	@extend %line-xl;
+	}
+}
+
 section.press {
  @extend %text-center;
 
@@ -409,7 +436,8 @@ section.press {
 		}
 
 		hr.separator {
-		  margin: 50 auto;
+			position: relative;
+		  margin: 40px auto;
 
 		  &:last-of-type {
 			  display: none;
@@ -488,10 +516,10 @@ section.thanks {
 				font-size: 16px;
 				}
 			@include lap {
-				font-size: 18px;
+				//font-size: 18px;
 				}
 			@include desk {
-				font-size: 20px;
+				//font-size: 20px;
 				}
 			}
 		}
