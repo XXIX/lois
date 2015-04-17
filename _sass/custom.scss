@@ -248,7 +248,7 @@ section {
 		width: 50%;
 		top: 0;
 		right: 0;
-		border-top: 1px solid lighten($color-blue, 70%);
+		border-top: 0;
 		padding: 80px;
 	}
 }
@@ -364,7 +364,7 @@ section.hero {
 		z-index: 999;
 		text-align: center;
 		//font-size: $text-xl;
-		@extend %text-m, %line-m, %text-center;
+		@extend %text-m, %line-m, %text-center, %visuelt-regular;
 		//@extend %text-center, %letter-xxl;
 		@include tab {
 			display: block;
