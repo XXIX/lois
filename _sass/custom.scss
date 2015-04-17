@@ -248,7 +248,7 @@ section {
 		width: 50%;
 		top: 0;
 		right: 0;
-		border-top: 1px solid $color-blue;
+		border-top: 1px solid lighten($color-blue, 70%);
 		padding: 80px;
 	}
 }
