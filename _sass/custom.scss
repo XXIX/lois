@@ -33,12 +33,6 @@ p {
 	@include tab {
 		font-size: 18px;
 		}
-	@include lap {
-		//font-size: 22px;
-		}
-	@include desk {
-		//font-size: 28px;
-		}
 
 	&:last-of-type {
 		margin-bottom: 0;
@@ -81,24 +75,27 @@ img {
 }
 
 hr {
-  width: 100%;
-  height: 15px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  margin: 50px auto;
-  display: block;
-  border: 0;
-	  position: absolute;
-	  bottom: 0;
+	display: block;
+	width: 100%;
+	height: 15px;
+	margin: 50px auto;
+	border: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: transparent;
+	@include tab {
+		position: absolute;
+		bottom: 0;
+		}
 
-  &.white {
-    background-image: url(../assets/separator-white.png);
-  }
-  &.blue {
-    background-image: url(../assets/separator-blue.png);
-  }
+	&.white {
+		background-image: url(../assets/separator-white.png);
+	}
+
+	&.blue {
+		background-image: url(../assets/separator-blue.png);
+	}
 }
 
 
@@ -211,7 +208,6 @@ section {
  		position: relative;
 		@include tab {
 			float: left;
-			//min-height: 100%;
 	      width: 50%;
 	      padding: 100px 0;
 	      }
@@ -219,11 +215,12 @@ section {
 
 	.section-left {
 		background-color: $color-blue;
-		//padding: 150px 0;
-		min-height: 800px;
+		padding: 60px 20px;
 		border-left: 10px solid $color-bronze;
 		border-right: 10px solid $color-bronze;
 		@include tab {
+			min-height: 800px;
+			padding: 80px 0;
 			border: none;
 			}
 
@@ -236,50 +233,46 @@ section {
 
 	// pad the bottom of the last section
 	&:last-of-type .section-left {
-	padding-bottom: 80px;
+		padding-bottom: 80px;
 	}
 
 	.section-right {
-		color: $color-blue;
-		//padding: 0 40px;
-		@extend %is-hidden, %tab-block;
 		position: absolute;
 		height: 100%;
 		width: 50%;
 		top: 0;
 		right: 0;
 		border-top: 0;
-		padding: 80px;
+		padding: 40px;
+		color: $color-blue;
+		@extend %is-hidden, %tab-block;
+		@include lap {
+			padding: 60px;
+			}
+		@include desk {
+			padding: 80px;
+			}
 	}
 }
 
 .section-right {
 
-  img {
-    //margin-top: 75%;
-  }
-
   .img-container {
-	  //min-height: 800px;
 	  width: 100%;
 	  height: 100%;
 	  margin: 0 auto;
-	  //position: absolute;
-	  background-size: auto 100%;
+	  background-size: 50% auto;
 	  background-position: 100% center;
 	  background-repeat: no-repeat;
-	  background-color: $color-bronze;
+	  background-color: white;
 	  background-attachment: fixed;
-	  //@extend %is-padded;
   }
 }
 
 .section-left {
 
-
   h2 {
     margin-bottom: 25px;
-    //text-align: center;
     @extend %text-l, %letter-xs, %line-xs;
     @include tab {
 	    font-size: 40px;
@@ -330,7 +323,6 @@ section.hero {
 	min-height: 100%;
 
 	.section-inner {
-		//padding: 0 !important;
 		min-height: 100%;
 		position: absolute;
 		@include tab {
@@ -343,7 +335,13 @@ section.hero {
 	}
 
 	.section-right {
-		padding: ($nav-height+80px) 80px 120px;
+		padding: ($nav-height+40px) 40px 120px;
+		@include lap {
+			padding: ($nav-height+60px) 60px 120px;
+			}
+		@include desk {
+			padding: ($nav-height+80px) 80px 120px;
+			}
 	}
 
 	.img-hero {
@@ -357,15 +355,12 @@ section.hero {
 
 	h1 {
 		display: none;
-		//position: absolute;
-		line-height: 120px;
 		bottom: 30px;
 		margin: 0 auto;
 		z-index: 999;
+		line-height: 120px;
 		text-align: center;
-		//font-size: $text-xl;
 		@extend %text-m, %line-m, %text-center, %visuelt-regular;
-		//@extend %text-center, %letter-xxl;
 		@include tab {
 			display: block;
 			}
@@ -480,7 +475,7 @@ section.thanks {
 /*------------- components -------------*/
 
 .hours {
-	@extend %letter-m;
+	@extend %letter-s, %lap-letter-m;
 
 	sup {
 		font-size: 10px;
@@ -492,8 +487,10 @@ section.thanks {
 		width: 20px;
 		display: block;
 		@include tab {
-			width: 30px;
 			display: inline-block;
+			}
+		@include lap {
+			width: 30px;
 			}
 	}
 }
