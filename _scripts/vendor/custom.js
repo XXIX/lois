@@ -54,6 +54,4 @@ $(document).ready(function() {
 	        //I get fired when you enter a section and I pass the list item of the section
 	    }
 	});
-
-	console.log('foo');
 });
