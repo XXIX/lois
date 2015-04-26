@@ -217,7 +217,7 @@ section {
 
 	.section-left {
 		background-color: $color-blue;
-		padding: 60px 20px;
+		padding: 60px 5px;
 		border-left: 10px solid $color-bronze;
 		border-right: 10px solid $color-bronze;
 		@include tab {
@@ -400,8 +400,11 @@ section.wine,
 section.food {
 
 	p {
-	font-size: 25px;
+	font-size: 20px;
 	@extend %line-xl;
+	@include tab {
+		font-size: 25px;
+		}
 	}
 }
 
