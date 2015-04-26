@@ -98,13 +98,11 @@ hr {
 	}
 }
 
-
 /*------------- nav -------------*/
-
 nav {
 	position: fixed;
 	width: 100%;
-	top: -1px; //hide top border
+
 	left: 0;
 	z-index: 999999;
 	background-color: $color-bronze;
@@ -116,20 +114,24 @@ nav {
 
 	.nav-min {
 		height: $nav-height;
-		border-top: 1px solid $color-blue;
+
 	}
 
 	.nav-extended {
+		height: $nav-height;
 		color: $color-blue;
 		background-color: $color-bronze;
 		text-align: center;
+		border-top: 1px solid $color-blue;
+		top: -1px; //hide top border
 
 		ul {
-		padding: 40px 0;
+		padding: 0;
 
 			li {
 				display: inline-block;
 				margin: 0 40px;
+				line-height: $nav-height;
 				@extend %text-s;
 
 				a:hover {
