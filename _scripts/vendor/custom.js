@@ -22,7 +22,6 @@ $(document).ready(function() {
 		} else {
 			//
 		}
-
 	});
 
 	// scroll to top
@@ -30,11 +29,6 @@ $(document).ready(function() {
 		$('#top').click(function() {
 			$("html, body").animate({ scrollTop: 0 }, "fast");
 		});
-	});
-
-	verticalCenter();
-		$(window).resize(function() {
-			verticalCenter();
 	});
 
 	$(window).trigger('resize');
@@ -60,4 +54,6 @@ $(document).ready(function() {
 	        //I get fired when you enter a section and I pass the list item of the section
 	    }
 	});
+
+	console.log('foo');
 });
