@@ -7,6 +7,7 @@ body {
   height:100%;
   color: white;
   @extend %visuelt-light, %letter-xs;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -599,11 +600,3 @@ z-index: 999999999;
 		background-image: url(../assets/corner-tl.png);
 	}
 }
-
-
-
-
-
-
-
-

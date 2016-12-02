@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Visuelt Regular Webfont';
+    src: url('../assets/fonts/visuelt_regular-web.eot');
+    src: url('../assets/fonts/visuelt_regular-web.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/visuelt_regular-web.woff') format('woff'),
+         url('../assets/fonts/visuelt_regular-web.woff2') format('woff2'),
+         url('../assets/fonts/visuelt_regular-web.ttf') format('truetype'),
+         url('../assets/fonts/visuelt_regular-web.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $nav-height:                             58px;
 $footer-height:                          60px;
 $product-filter-height:                  50px;
@@ -20,15 +32,15 @@ $line-l:                                 1.6;
 $line-xl:                                1.8;
 $line-xxl:                               2.0;
 
-$text-light-family:                      "Visuelt Light", 'Helvetica Neue', 'Segoe UI', sans-serif;
+$text-light-family:                      "Visuelt Light Webfont", 'Helvetica Neue', 'Segoe UI', sans-serif;
 $text-light-weight:                      normal;
 $text-light-style:                       normal;
 
-$text-regular-family:                    "Visuelt Regular", 'Helvetica Neue', 'Segoe UI', sans-serif;
+$text-regular-family:                    "Visuelt Regular Webfont", 'Helvetica Neue', 'Segoe UI', sans-serif;
 $text-regular-weight:                    normal;
 $text-regular-style:                     normal;
 
-$text-bold-family:                       "Visuelt Black", 'Helvetica Neue', 'Segoe UI', sans-serif;
+$text-bold-family:                       "Visuelt Black Webfont", 'Helvetica Neue', 'Segoe UI', sans-serif;
 $text-bold-weight:                       normal;
 $text-bold-style:                        normal;
 
@@ -57,5 +69,6 @@ $letter-xl:                              1.0em;
 $letter-xxl:                             10px;
 
 
-%visuelt-light, .visuelt-light { font-family:"Visuelt Light", 'Helvetica Neue', 'Segoe UI', sans-serif; font-weight:200; font-style:normal;}
-%visuelt-regular, .visuelt-regular { font-family:"Visuelt Regular", 'Helvetica Neue', 'Segoe UI', sans-serif; font-weight:normal; font-style:normal;}
+
+%visuelt-light, .visuelt-light { font-family:"Visuelt Regular Webfont", 'Helvetica Neue', 'Segoe UI', sans-serif; font-weight:200; font-style:normal;}
+%visuelt-regular, .visuelt-regular { font-family:"Visuelt Regular Webfont", 'Helvetica Neue', 'Segoe UI', sans-serif; font-weight:normal; font-style:normal;}
