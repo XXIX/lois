@@ -1,0 +1,27 @@
+GEM
+  specs:
+    httmultiparty (0.3.16)
+      httparty (>= 0.7.3)
+      mimemagic
+      multipart-post
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    mimemagic (0.3.2)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
+    psych (3.1.0)
+    rack (2.1.1)
+    siteleaf (1.0.10)
+      httmultiparty (~> 0.3.13)
+      httparty (~> 0.14.0)
+      psych (>= 2.0.17)
+      rack
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  siteleaf (~> 1)
+
+BUNDLED WITH
+   2.0.2
